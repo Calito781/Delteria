@@ -1,0 +1,26 @@
+package delteria.gserver;
+
+import javax.inject.Inject;
+
+public class GServerHandler implements Runnable {
+
+	private final GServerConnection connection;
+
+	@Inject GServerHandler(GServerConnection connection) {
+		this.connection = connection;
+	}
+	
+	@Override
+	public void run() {
+		while (true) {
+			try {
+				connection.processMessage();
+			} catch (CommunicationException e) {
+				e.printStackTrace();
+			}
+
+			Thread.yield();
+		}
+	}
+
+}

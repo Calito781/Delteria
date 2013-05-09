@@ -1,0 +1,18 @@
+package delteria.gserver.util;
+
+import com.google.gson.JsonElement;
+
+import delteria.gserver.CommunicationListener;
+
+public class IncomingLogger implements CommunicationListener {
+
+	@Override
+	public void onReceivedMessage(JsonElement message) {
+		System.out.println(message);
+	}
+
+	@Override
+	public boolean isExpired() {
+		return false;
+	}
+}

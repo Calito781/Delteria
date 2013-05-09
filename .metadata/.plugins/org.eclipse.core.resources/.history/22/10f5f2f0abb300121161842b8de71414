@@ -1,0 +1,31 @@
+package delteria.gserver;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
+public class GServerAdapter {
+	private final JsonParser parser = new JsonParser();
+	
+	public String convertToServer(JsonElement json) {
+		String outgoing = json.toString();
+		return escape(outgoing);
+	}
+	
+	private String escape(String outgoing) {
+		outgoing = outgoing.replace("\\", "\\\\");
+		outgoing = outgoing.replace("\n", "\\n");
+		outgoing = outgoing.replace("\r", "\\r");
+
+		return outgoing;
+	}
+
+	public JsonElement convertFromServer(String incoming) {
+		String original = unescape(incoming);
+
+		return parser.parse(original);
+	}
+
+	private String unescape(String incoming) {
+		return incoming;
+	}
+}

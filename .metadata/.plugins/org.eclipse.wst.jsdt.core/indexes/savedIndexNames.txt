@@ -1,0 +1,7 @@
+INDEX VERSION 1.122+/Users/wleroux/Projects/Delteria/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+4249188406.index
+4195658354.index
+1368061533.index
+198232023.index
+966725580.index
+3955829626.index

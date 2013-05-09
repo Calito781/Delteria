@@ -1,0 +1,49 @@
+package delteria.repo.items;
+
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import javax.persistence.EntityManager;
+
+import delteria.gserver.GServerConnection;
+import delteria.gserver.socket.CommunicationException;
+
+public class ItemRepository {
+
+	private EntityManager em;
+	private GServerConnection server;
+
+	public ItemRepository(GServerConnection server, EntityManager em) {
+		this.em = em;
+		this.server = server;
+	}
+	
+	public Item get(String item_id) {
+		Item item = em.find(Item.class, item_id);
+		if (item == null) {
+			item = loadFromGame(item_id);
+			if (item != null) {
+				em.persist(item);
+			}
+		}
+		
+		return item;
+	}
+
+	private Item loadFromGame(String item_id) throws CommunicationException {
+		try {
+			Future<Item> future_item = server.requestItem(item_id);
+			return future_item.get(10, TimeUnit.SECONDS);
+		} catch (TimeoutException e) {
+			return null; // cannot find!
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		} catch (ExecutionException e) {
+			// Encountered a problem. Print and exit!
+			e.printStackTrace();
+			return null;
+		}
+	}
+}

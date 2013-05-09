@@ -1,0 +1,55 @@
+package delteria.web.items;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import javax.inject.Inject;
+import javax.inject.Provider;
+import javax.inject.Singleton;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import delteria.gserver.GServerConnection;
+import delteria.gserver.socket.CommunicationException;
+import delteria.repo.items.ItemReference;
+
+@Singleton
+public class ItemsServlet extends HttpServlet {
+
+	private static final long serialVersionUID = -7229176987914516554L;
+
+	private final Provider<GServerConnection> connection_provider;
+	
+	@Inject
+	ItemsServlet(Provider<GServerConnection> connection_provider) {
+		this.connection_provider = connection_provider;
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException
+	{
+		GServerConnection connection = connection_provider.get();
+		try {
+			Future<List<ItemReference>> futureItem = connection.requestItems();
+			try {
+				List<ItemReference> items = futureItem.get(10, TimeUnit.SECONDS);
+				
+				request.setAttribute("items", items);
+				request.getRequestDispatcher("item/viewItemList.jsp").forward(request, response);
+			} catch (TimeoutException e) {
+				futureItem.cancel(true);
+				response.addHeader("Status-Code", "503");
+			}
+		} catch (CommunicationException e) {
+		} catch (InterruptedException e) {
+		} catch (ExecutionException e) {
+		}
+	}
+}

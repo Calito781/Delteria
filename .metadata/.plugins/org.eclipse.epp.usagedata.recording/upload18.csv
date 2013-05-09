@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+opened,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562450298
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562450357
+error,log,,,"GlassFish: deploy is failing=",1367562450429
+error,log,,,"cannot Deploy Web",1367562450430
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562450750
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562451121
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562452933
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562453072
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562458233
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562461378
+executed,command,org.eclipse.ui.ide,3.7.0.v20110928-1505,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1367562464078
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.deletePreviousWord",1367562467535
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562476674
+executed,command,org.eclipse.ui.ide,3.7.0.v20110928-1505,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1367562479699
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562485345
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562486651
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562486728
+closed,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562486728
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.close",1367562486743
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562486958
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562488134
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562489187
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.delete",1367562489242
+error,log,,,"GlassFish: deploy is failing=",1367562489926
+error,log,,,"cannot Deploy Web",1367562489926
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562490151
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562490565
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562490876
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562491614
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562491906
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562492763
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562492913
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562499410
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562508610
+error,log,,,"GlassFish: deploy is failing=",1367562510041
+error,log,,,"cannot Deploy Web",1367562510041
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562510158
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562513378
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562518669
+opened,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562518987
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562519051
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.deletePreviousWord",1367562521771
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.deletePreviousWord",1367562522349
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562522620
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562522812
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562522988
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562524043
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562524235
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562524588
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.deletePreviousWord",1367562526845
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.deletePreviousWord",1367562527037
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562527539
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562527763
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562528171
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562529067
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562529251
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562529696
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.deletePreviousWord",1367562530933
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordPrevious",1367562531483
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordPrevious",1367562531678
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.deletePreviousWord",1367562532381
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562534387
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.deletePreviousWord",1367562534669
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562535059
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562535388
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562537600
+error,log,,,"GlassFish: deploy is failing=",1367562538923
+error,log,,,"cannot Deploy Web",1367562538924
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562539141
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562542568
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562550572
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562550852
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562554136
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562556129
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562557111
+closed,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562557112
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.close",1367562557129
+error,log,,,"GlassFish: deploy is failing=",1367562557514
+error,log,,,"cannot Deploy Web",1367562557515
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562557617
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562560535
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562561251
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562582396
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562582712
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562588139
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562588459
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562595506
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562598092
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562612147
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562612436
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562613309
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562613632
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562623066
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562628019
+error,log,,,"GlassFish: deploy is failing=",1367562628876
+error,log,,,"cannot Deploy Web",1367562628876
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562629098
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562630501
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562631620
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1367562632719
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562634769
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562636235
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562639175
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562640254
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562649585
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562651726
+executed,command,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.edit.text.java.open.editor",1367562651729
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.copy",1367562652931
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562653645
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562670553
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562676331
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.paste",1367562687399
+executed,command,org.eclipse.ui.ide,3.7.0.v20110928-1505,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1367562689058
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562702383
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562706049
+error,log,,,"GlassFish: deploy is failing=",1367562706902
+error,log,,,"cannot Deploy Web",1367562706903
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562707059
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562708770
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562710718
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562711038
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562713865
+error,log,,,"GlassFish: deploy is failing=",1367562714469
+error,log,,,"cannot Deploy Web",1367562714470
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562714772
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562717225
+activated,view,org.eclipse.wst.server.ui,1.3.0.v20120210_1439,"org.eclipse.wst.server.ui.ServersView",1367562718941
+executed,command,org.eclipse.wst.server.ui,1.3.0.v20120210_1439,"org.eclipse.wst.server.debug",1367562723412
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562724416
+started,bundle,org.eclipse.php.debug.daemon,3.0.1.v201201110400,"org.eclipse.php.debug.daemon",1367562725966
+started,bundle,org.eclipse.php.server.core,3.0.1.v201201110400,"org.eclipse.php.server.core",1367562725988
+started,bundle,org.eclipse.php.debug.core,3.0.1.v201201110400,"org.eclipse.php.debug.core",1367562726153
+activated,view,org.eclipse.wst.server.ui,1.3.0.v20120210_1439,"org.eclipse.wst.server.ui.ServersView",1367562731542
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562734218
+error,log,,,"GlassFish: deploy is failing=",1367562734946
+error,log,,,"cannot Deploy Web",1367562734951
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562735169
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562737742
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562749430
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562749751
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562754565
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562754869
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.goto.wordNext",1367562759875
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562760331
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562760498
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562760667
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordPrevious",1367562760987
+executed,command,org.eclipse.ui.workbench.texteditor,3.7.0.v20110928-1504,"org.eclipse.ui.edit.text.select.wordNext",1367562761307
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562773216
+error,log,,,"GlassFish: deploy is failing=",1367562773849
+error,log,,,"cannot Deploy Web",1367562773850
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562774128
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562777671
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562780979
+activated,view,org.eclipse.wst.server.ui,1.3.0.v20120210_1439,"org.eclipse.wst.server.ui.ServersView",1367562785015
+executed,command,org.eclipse.wst.server.ui,1.3.0.v20120210_1439,"org.eclipse.wst.server.debug",1367562787278
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562787789
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562790194
+activated,view,org.eclipse.wst.server.ui,1.3.0.v20120210_1439,"org.eclipse.wst.server.ui.ServersView",1367562793821
+error,log,,,"GlassFish: deploy is failing=",1367562797133
+error,log,,,"cannot Deploy Web",1367562797138
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562826914
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562828017
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562834783
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562837753
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562840124
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562842074
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562854034
+opened,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367562857170
+activated,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367562857225
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562870319
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562870761
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562873748
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562875671
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1367562884235
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562888471
+executed,command,org.eclipse.ui.ide,3.7.0.v20110928-1505,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1367562892141
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1367562898342
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367562899197
+executed,command,org.eclipse.ui.ide,3.7.0.v20110928-1505,"org.eclipse.jdt.ui.edit.text.java.correction.assist.proposals",1367562903095
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562905346
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562912265
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562920117
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562926694
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562932486
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562934584
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562943030
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562945056
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562957276
+error,log,,,"GlassFish: deploy is failing=",1367562957904
+error,log,,,"cannot Deploy Web",1367562957905
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562958010
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562958196
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562960065
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562961131
+error,log,,,"GlassFish: deploy is failing=",1367562961599
+error,log,,,"cannot Deploy Web",1367562961599
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562961933
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367562962520
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562962670
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562963931
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562964081
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562964751
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367562966985
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367562970565
+error,log,,,"GlassFish: deploy is failing=",1367562970980
+error,log,,,"cannot Deploy Web",1367562970981
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562971115
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562972807
+activated,view,org.eclipse.wst.server.ui,1.3.0.v20120210_1439,"org.eclipse.wst.server.ui.ServersView",1367562988126
+executed,command,org.eclipse.wst.server.ui,1.3.0.v20120210_1439,"org.eclipse.wst.server.debug",1367562989771
+activated,view,org.eclipse.ui.console,3.5.100.v20111007_r372,"org.eclipse.ui.console.ConsoleView",1367562990817
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562991100
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562997423
+error,log,,,"GlassFish: deploy is failing=",1367562999665
+error,log,,,"cannot Deploy Web",1367562999666
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367562999793
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563000122
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563001501
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563009582
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367563010699
+error,log,,,"Could not get an editor input for the given element",1367563010974
+opened,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563036032
+activated,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563036095
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367563036738
+activated,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563037069
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367563043489
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367563043853
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367563046712
+error,log,,,"GlassFish: deploy is failing=",1367563047490
+error,log,,,"cannot Deploy Web",1367563047491
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563047760
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563049229
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1367563049697
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.undo",1367563050040
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367563051235
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563051643
+error,log,,,"GlassFish: deploy is failing=",1367563051875
+error,log,,,"cannot Deploy Web",1367563051876
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563054597
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367563055833
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367563058077
+error,log,,,"GlassFish: deploy is failing=",1367563058696
+error,log,,,"cannot Deploy Web",1367563058697
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563058908
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563061524
+activated,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563062149
+closed,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367563062156
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.close",1367563062179
+activated,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563063416
+closed,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563063421
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.close",1367563063429
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367563064406
+closed,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563064411
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.close",1367563064421
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563075623
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563081439
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367563086395
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367563086738
+activated,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367563090763
+closed,editor,org.eclipse.jdt.ui,3.7.2.v20120109-1427,"org.eclipse.jdt.ui.CompilationUnitEditor",1367563090763
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.close",1367563090789
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.edit.text.contentAssist.proposals",1367563093567
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367563097901
+error,log,,,"GlassFish: deploy is failing=",1367563098406
+error,log,,,"cannot Deploy Web",1367563098406
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563098725
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563101711
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1367563103420
+opened,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563114351
+activated,editor,org.eclipse.wst.xml.ui,1.1.202.v201112071516,"org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart",1367563114403
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1367563118481
+error,log,,,"GlassFish: deploy is failing=",1367563119179
+error,log,,,"cannot Deploy Web",1367563119179
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1367563119280

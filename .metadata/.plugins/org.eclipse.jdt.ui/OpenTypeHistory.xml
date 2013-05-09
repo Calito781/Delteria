@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+<typeInfo handle="=Web/src&lt;delteria.gserver.commands{CommandRequestItem.java[CommandRequestItem" modifiers="1" timestamp="1367879854000"/>
+<typeInfo handle="=Web/src&lt;delteria.gserver{GServerConnection.java[GServerConnection" modifiers="1" timestamp="1368060341000"/>
+<typeInfo handle="=Web/src&lt;delteria.gserver.util{GServerAdapter.java[GServerAdapter" modifiers="1" timestamp="1367780680000"/>
+<typeInfo handle="=Web/src&lt;delteria.gserver.commands{CommandRequestCard.java[CommandRequestCard" modifiers="1" timestamp="1367979339000"/>
+<typeInfo handle="=Web/src&lt;delteria.web.items{ItemServlet.java[ItemServlet" modifiers="1" timestamp="1368054267000"/>
+<typeInfo handle="=Web/src&lt;delteria.web.card{CharacterRenderer.java[CharacterRenderer" modifiers="1" timestamp="1367972066000"/>
+<typeInfo handle="=Web/src&lt;delteria.repo.items{Item.java[Item" modifiers="1" timestamp="1367967206000"/>
+<typeInfo handle="=Web/src&lt;delteria.repo.card{Card.java[Card" modifiers="1" timestamp="1367981330000"/>
+<typeInfo handle="=Web/src&lt;delteria.repo.file{FileRepository.java[FileRepository" modifiers="1" timestamp="1368055747000"/>
+<typeInfo handle="=Web/src&lt;delteria.concurrent{FutureValue.java[FutureValue" modifiers="1" timestamp="1368055762000"/>
+<typeInfo handle="=Web/src&lt;delteria.web.items{ItemsServlet.java[ItemsServlet" modifiers="1" timestamp="1368060409000"/>
+<typeInfo handle="=Web/src&lt;delteria.repo.items{ItemRepository.java[ItemRepository" modifiers="1" timestamp="1368064461000"/>
+</typeInfoHistroy>

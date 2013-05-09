@@ -1,0 +1,82 @@
+package delteria.web.card;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
+import javax.enterprise.inject.Default;
+import javax.imageio.ImageIO;
+import javax.inject.Inject;
+
+import delteria.repo.card.Card;
+import delteria.repo.file.File;
+import delteria.repo.file.FileRepository;
+
+@Default
+@Stateless
+public class CardRenderer {
+
+	private static final int WIDTH = 450;
+	private static final int HEIGHT = 80;
+
+	private final DurationFormatter duration_formatter;
+
+	@EJB CharacterRenderer character_renderer;
+
+	@Inject FileRepository files;
+
+	public CardRenderer() {
+		duration_formatter = new DurationFormatter();
+	}
+
+	public RenderedImage render(Card card, int background_id) throws IOException {
+		BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_4BYTE_ABGR);
+
+		Graphics graphics = image.getGraphics();
+
+		// draw background
+		File background_file = files.get(String.format("delt_card-backdrop%d.png", background_id));
+		if (background_file != null && background_file.content.length > 0) {
+			Image background_image = ImageIO.read(new ByteArrayInputStream(background_file.content));
+			graphics.drawImage(background_image, 0, 0, 450, 80, null);
+		}
+
+		// status
+		File status_file = files.get(card.isOnline ? "delt_card-status_online.png" : "delt_card-status_offline.png");
+		if (status_file != null && status_file.content.length > 0) {
+			Image status_image = ImageIO.read(new ByteArrayInputStream(status_file.content));
+			graphics.drawImage(status_image, 70, 17, null);
+		}
+
+		// logo
+		Image logo_image = ImageIO.read(getClass().getResourceAsStream("logo.png"));
+		graphics.drawImage(logo_image, WIDTH - 100, 0, null);
+
+		// draw sprite
+		Image character = character_renderer.render(card);
+		graphics.drawImage(character, 8, 8, null);
+		
+		// draw name
+		graphics.setFont(new Font("Arial", Font.BOLD, 17));
+		graphics.setColor(Color.BLACK);
+		graphics.drawString(card.nickname, 90 + 1, 30 + 1);
+		graphics.setColor(Color.WHITE);
+		graphics.drawString(card.nickname, 90, 30);
+
+		// draw online time
+		graphics.setFont(new Font("Arial", Font.PLAIN, 12));
+		graphics.setColor(Color.BLACK);
+		graphics.drawString(duration_formatter.format(card.onlineDuration), 70 + 1, 44 + 1);
+		graphics.setColor(Color.WHITE);
+		graphics.drawString(duration_formatter.format(card.onlineDuration), 70, 44);
+
+		return image;
+	}
+}

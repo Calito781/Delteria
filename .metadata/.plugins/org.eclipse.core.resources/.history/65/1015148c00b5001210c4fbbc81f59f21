@@ -1,0 +1,5 @@
+package delteria.card;
+
+public class CharacterRenderer {
+
+}

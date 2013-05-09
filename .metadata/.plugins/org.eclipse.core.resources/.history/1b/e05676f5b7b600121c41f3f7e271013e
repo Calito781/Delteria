@@ -1,0 +1,35 @@
+package delteria.web.card;
+
+import java.awt.Canvas;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.awt.image.FilteredImageSource;
+import java.awt.image.ImageFilter;
+
+import delteria.repo.card.Card;
+
+public class CharacterRenderer {
+	private static final int WIDTH = 46;
+	private static final int HEIGHT = 64;
+
+	public Image render(Card card) {
+		BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_4BYTE_ABGR);
+
+		Graphics graphics = image.getGraphics();
+		
+		ImageFilter body_filter = new BodyImageFilter(card.colors);
+		Image body = new Canvas().createImage(new FilteredImageSource(card.body.getSource(), body_filter));
+		
+		drawImage(graphics, body, 8, 32, 32 * 2, 0, 32, 32);
+		drawImage(graphics, card.head, 8, 18, 0, 32*2, 32, 32);
+		drawImage(graphics, card.hat, 0, 0, 48 * 2, 0, 48, 48);
+
+		return image;
+	}
+
+	private void drawImage(Graphics graphics, Image image, int dx, int dy, int sx,
+			int sy, int width, int height) {
+		graphics.drawImage(image, dx, dy, dx + width, dy + height, sx, sy, sx + width, sy + height, null);
+	}
+}

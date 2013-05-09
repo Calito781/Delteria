@@ -1,0 +1,78 @@
+package delteria.gserver;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Future;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonPrimitive;
+
+import delteria.card.Card;
+import delteria.concurrent.FutureValue;
+import delteria.gserver.commands.CommandRequestCard;
+
+@Singleton
+public class GServerConnection {
+
+	private final AlwaysAliveSocket connection;
+	private final GServerAdapter adapter;
+	private final List<CommunicationListener> listeners = new ArrayList<CommunicationListener>();
+	private final ImageDecoder image_decoder = new ImageDecoder();
+
+	@Inject GServerConnection(AlwaysAliveSocket connection, GServerAdapter adapter) {
+		this.connection = connection;
+		this.adapter = adapter;
+
+		listeners.add(new CommunicationListener() {		
+			@Override
+			public void onReceivedMessage(JsonElement message) {
+			  System.out.println("Incoming: " + message.toString());
+			}
+
+			@Override
+			public boolean isExpired() {
+				return false;
+			}
+		});
+	}
+	
+	public void processMessage() throws CommunicationException {
+		JsonElement message;
+
+		String encoded_incoming = connection.read();
+		message = adapter.convertFromServer(encoded_incoming);
+
+		List<CommunicationListener> message_listeners = new ArrayList<CommunicationListener>(listeners);
+		for (CommunicationListener listener: message_listeners) {
+			listener.onReceivedMessage(message);
+		}
+	}
+	
+	public void sendChat(String message) throws CommunicationException {
+		JsonArray command = new JsonArray();
+		command.add(new JsonPrimitive("chat"));
+		command.add(new JsonPrimitive(message));
+		
+		sendCommand(command);
+	}
+
+	public Future<Card> requestCard(final String account) throws CommunicationException {
+		return new CommandRequestCard(account).sendCommand(this);
+	}
+	
+	public void sendCommand(JsonElement command) throws CommunicationException {
+		System.out.println("Outgoing: "+ command.toString());
+
+		String outputMessage = adapter.convertToServer(command);
+		
+		connection.write(outputMessage);
+	}
+
+	public void addListener(CommunicationListener listener) {
+		listeners.add(listener);
+	}
+}

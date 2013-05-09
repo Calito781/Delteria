@@ -1,0 +1,5 @@
+package delteria.web.file;
+
+public class FileServlet {
+
+}

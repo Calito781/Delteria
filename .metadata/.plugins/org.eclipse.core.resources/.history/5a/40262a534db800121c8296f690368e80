@@ -1,0 +1,57 @@
+package delteria.concurrent;
+
+import java.util.concurrent.Future;
+import java.util.concurrent.Semaphore;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+public class FutureValue<T> implements Future<T> {
+
+	private boolean cancelled = false;
+	private boolean done = false;
+	private T value = null;
+	
+	private final Semaphore semaphore = new Semaphore(0);
+
+	@Override
+	public boolean cancel(boolean mayInterruptIfRunning) {
+		if (isDone()) {
+			return false;
+		} else {
+			cancelled = true;
+			return true;
+		}
+	}
+
+	@Override
+	public T get() throws InterruptedException {
+		semaphore.acquire();
+		
+		return value;
+	}
+
+	@Override
+	public T get(long timeout, TimeUnit unit) throws InterruptedException, TimeoutException {
+		if (semaphore.tryAcquire(timeout, unit)) {
+			return value;
+		} else {
+			throw new TimeoutException();
+		}
+	}
+
+	@Override
+	public boolean isCancelled() {
+		return cancelled;
+	}
+
+	@Override
+	public boolean isDone() {
+		return done;
+	}
+	
+	public void set(T value) {
+		this.value = value;
+		semaphore.release();
+		done = true;
+	}
+}

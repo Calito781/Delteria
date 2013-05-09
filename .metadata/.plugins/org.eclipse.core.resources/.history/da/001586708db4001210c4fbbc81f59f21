@@ -1,0 +1,14 @@
+package delteria.card;
+
+public class Card {
+
+	public final String nickname;
+	public final boolean isOnline;
+	public final long onlineDuration;
+
+	public Card(String nickname, boolean isOnline, long onlineDuration) {
+		this.nickname = nickname;
+		this.isOnline = isOnline;
+		this.onlineDuration = onlineDuration;
+	}
+}

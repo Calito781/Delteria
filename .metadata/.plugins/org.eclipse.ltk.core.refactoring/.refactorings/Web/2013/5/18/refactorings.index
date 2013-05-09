@@ -1,0 +1,19 @@
+1367534610740	Rename resource 'image.png'
+1367534618468	Rename resource 'image-1.png'
+1367540855080	Rename resource 'jquery-1.9.1.min.js'
+1367540861876	Rename resource 'jquery.min.js'
+1367541200849	Rename resource 'tag'
+1367541379081	Rename resource 'template.tag'
+1367542592482	Move 1 resources to 'css'
+1367550213327	Delete element
+1367550314597	Delete element
+1367550350131	Rename type 'Servlet'
+1367554633542	Delete element
+1367554714931	Delete element
+1367562488719	Delete element
+1367563215427	Rename package 'delteria.guice'
+1367650800512	Rename type 'CardGraphics'
+1367651015189	Rename type 'CardDrawer'
+1367651020439	Rename method 'draw'
+1367651871962	Delete element
+1367684962517	Rename type 'GSocket'

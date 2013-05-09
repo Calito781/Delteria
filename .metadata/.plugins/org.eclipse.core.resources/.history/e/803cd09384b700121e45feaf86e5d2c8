@@ -1,0 +1,35 @@
+package delteria.web.card;
+
+import java.awt.image.RGBImageFilter;
+
+import com.google.gson.JsonArray;
+
+
+public class BodyImageFilter extends RGBImageFilter {
+
+	private final JsonArray colors;
+
+	public BodyImageFilter(JsonArray colors) {
+		this.colors = colors;
+	}
+
+	@Override
+	public int filterRGB(int x, int y, int rgba) {
+		switch (rgba & 0xFFFFFF) {
+		case 0xFFAD6B: // skin
+			return rgba	& 0xFF000000 | (Color.valueOf(this.colors.get(0).getAsString().toUpperCase()).rgb) & 0xFFFFFF;
+		case 0xCE1829: // shoes
+			return rgba	& 0xFF000000 | (Color.valueOf(this.colors.get(3).getAsString().toUpperCase()).rgb) & 0xFFFFFF;
+		case 0xFF0000: // sleeves
+			return rgba	& 0xFF000000 | (Color.valueOf(this.colors.get(2).getAsString().toUpperCase()).rgb) & 0xFFFFFF;
+		case 0xFFFFFF: // coat
+			return rgba	& 0xFF000000 | (Color.valueOf(this.colors.get(1).getAsString().toUpperCase()).rgb) & 0xFFFFFF;
+		case 0x0000FF: // belt
+			return rgba	& 0xFF000000 | (Color.valueOf(this.colors.get(4).getAsString().toUpperCase()).rgb) & 0xFFFFFF;
+			default:
+				return rgba;
+		}
+		
+	}
+
+}

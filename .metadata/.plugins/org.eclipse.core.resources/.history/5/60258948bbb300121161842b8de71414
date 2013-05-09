@@ -1,0 +1,48 @@
+package delteria.guice;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.annotation.WebListener;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.servlet.GuiceServletContextListener;
+import com.google.inject.servlet.ServletModule;
+
+import delteria.communication.ChatServlet;
+import delteria.gserver.GServerListener;
+import delteria.gserver.GServerModule;
+
+/**
+ * Application Lifecycle Listener implementation class GuiceServletConfig
+ *
+ */
+@WebListener
+public class GuiceServletConfig extends GuiceServletContextListener {
+
+	private ServletContext servletContext;
+
+	@Override
+    public void contextInitialized(ServletContextEvent event) {
+        servletContext = event.getServletContext();
+
+        // the super call here is where Guice Servlets calls
+        // getInjector (below), binds the ServletContext to the
+        // injector and stores the injector in the ServletContext.
+        super.contextInitialized(event);
+    }
+
+	@Override
+	protected Injector getInjector() {
+		Injector injector = Guice.createInjector(new GServerModule(), new ServletModule() {
+		     @Override
+		     protected void configureServlets() {
+		    	 serve("/sendChat").with(ChatServlet.class);
+		     }
+		});
+		
+		servletContext.addListener(injector.getInstance(GServerListener.class));
+		
+		return injector;
+	}
+}

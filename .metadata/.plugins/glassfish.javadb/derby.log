@@ -1,0 +1,134 @@
+2013-05-06 23:02:20.519 GMT : Security manager installed using the Basic server security policy.
+2013-05-06 23:02:23.092 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-06 23:02:23.092 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-06 23:02:44.800 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-7c14-de44-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@5ab8df17 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''
+
+2013-05-07 00:54:31.450 GMT:
+Shutting down instance a816c00e-013e-7c14-de44-ffffd49d0244 with class loader sun.misc.Launcher$AppClassLoader@5ab8df17 
+----------------------------------------------------------------
+2013-05-07 00:54:31.552 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+2013-05-07 00:55:17.048 GMT : Security manager installed using the Basic server security policy.
+2013-05-07 00:55:17.955 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-07 00:55:17.955 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-07 00:55:25.888 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-7c7c-3fe7-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''
+2013-05-07 04:04:15.081 GMT : Security manager installed using the Basic server security policy.
+2013-05-07 04:04:16.337 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-07 04:04:16.337 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-07 04:04:26.830 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-7d29-41fc-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''
+
+2013-05-07 04:51:12.788 GMT:
+Shutting down instance a816c00e-013e-7d29-41fc-ffffd49d0244 with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+----------------------------------------------------------------
+2013-05-07 04:51:13.748 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+2013-05-07 21:47:51.968 GMT : Security manager installed using the Basic server security policy.
+2013-05-07 21:47:54.251 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-07 21:47:54.251 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-07 21:48:10.820 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-80f7-08e5-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''
+
+2013-05-08 03:28:02.084 GMT:
+Shutting down instance a816c00e-013e-80f7-08e5-ffffd49d0244 with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+----------------------------------------------------------------
+2013-05-08 03:28:02.106 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+2013-05-08 22:51:17.410 GMT : Security manager installed using the Basic server security policy.
+2013-05-08 22:51:18.051 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-08 22:51:18.051 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-08 22:51:31.373 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-8657-721d-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''
+
+2013-05-08 23:32:23.450 GMT:
+Shutting down instance a816c00e-013e-8657-721d-ffffd49d0244 with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+----------------------------------------------------------------
+2013-05-08 23:32:23.457 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+2013-05-08 23:37:11.818 GMT : Security manager installed using the Basic server security policy.
+2013-05-08 23:37:12.638 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-08 23:37:12.638 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-08 23:37:56.185 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-8681-7965-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''
+
+2013-05-08 23:43:13.649 GMT:
+Shutting down instance a816c00e-013e-8681-7965-ffffd49d0244 with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+----------------------------------------------------------------
+2013-05-08 23:43:13.656 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+2013-05-08 23:59:25.291 GMT : Security manager installed using the Basic server security policy.
+2013-05-08 23:59:26.109 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-08 23:59:26.109 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-09 00:03:27.764 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-8695-d2b3-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''
+
+2013-05-09 00:55:54.146 GMT:
+Shutting down instance a816c00e-013e-8695-d2b3-ffffd49d0244 with class loader sun.misc.Launcher$AppClassLoader@1f3e8d89 
+----------------------------------------------------------------
+2013-05-09 00:55:54.155 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+2013-05-09 01:43:13.402 GMT : Security manager installed using the Basic server security policy.
+2013-05-09 01:43:14.133 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-09 01:43:14.133 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-09 01:43:23.346 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-86f4-db13-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@5ab8df17 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''
+
+2013-05-09 01:55:11.932 GMT:
+Shutting down instance a816c00e-013e-86f4-db13-ffffd49d0244 with class loader sun.misc.Launcher$AppClassLoader@5ab8df17 
+----------------------------------------------------------------
+2013-05-09 01:55:11.939 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) shutdown
+2013-05-09 01:58:28.594 GMT : Security manager installed using the Basic server security policy.
+2013-05-09 01:58:29.461 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+2013-05-09 01:58:29.461 GMT : Apache Derby Network Server - 10.6.2.1 - (999685) started and ready to accept connections on port 1527
+----------------------------------------------------------------
+2013-05-09 01:58:35.398 GMT:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.6.2.1 - (999685): instance a816c00e-013e-8702-d26a-ffffd49d0244 
+on database directory /Users/wleroux/Projects/Delteria/.metadata/.plugins/glassfish.javadb/sun-appserv-samples  with class loader sun.misc.Launcher$AppClassLoader@5ab8df17 
+Loaded from file:/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/javadb/lib/derby.jar
+java.vendor=Apple Inc.
+java.runtime.version=1.6.0_37-b06-434-11M3909
+Database Class Loader started - derby.database.classpath=''

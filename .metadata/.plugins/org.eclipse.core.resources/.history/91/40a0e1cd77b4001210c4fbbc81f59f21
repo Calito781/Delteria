@@ -1,0 +1,24 @@
+package delteria.card;
+
+import java.io.IOException;
+
+import javax.inject.Singleton;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@Singleton
+public class CardServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 8060795477260698416L;
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) {
+		String account = (String) req.getParameter("account");
+		
+		try {
+			res.getOutputStream().write(account.getBytes());
+		} catch (IOException e) {
+		}
+	}
+}

@@ -1,0 +1,20 @@
+package delteria.communication;
+
+import javax.inject.Singleton;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.inject.servlet.RequestScoped;
+
+@RequestScoped
+public class ChatServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 7743986403374933705L;
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) {
+		String message = (String) req.getParameter("message");
+		System.out.println("Testing: " + message);
+	}
+}

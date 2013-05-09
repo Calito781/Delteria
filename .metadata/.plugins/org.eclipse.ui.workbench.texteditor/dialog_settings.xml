@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="243" key="DIALOG_WIDTH"/>
+		<item value="244" key="DIALOG_Y_ORIGIN"/>
+		<item value="379" key="DIALOG_HEIGHT"/>
+		<item value="550" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Lucida Grande|11.0|0|COCOA|1|LucidaGrande" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="false" key="wholeword"/>
+		<item value="com.sun.enterprise.web.WebPipeline.invoke" key="selection"/>
+		<list key="findhistory">
+			<item value="Weld"/>
+			<item value="FutureValue"/>
+			<item value="Null"/>
+			<item value="  while locating com.google.inject.persist.jpa.JpaPersistService"/>
+			<item value="JPAIni"/>
+			<item value="/Web"/>
+			<item value="debug"/>
+			<item value="border"/>
+		</list>
+		<list key="replacehistory">
+			<item value="menu"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item value="385" key="DIALOG_Y_ORIGIN"/>
+		<item value="435" key="DIALOG_X_ORIGIN"/>
+	</section>
+</section>

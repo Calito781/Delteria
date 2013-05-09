@@ -1,0 +1,31 @@
+package delteria.communication;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.inject.Injector;
+import com.sun.xml.ws.runtime.dev.Session;
+
+@Singleton
+public class ChatServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 7743986403374933705L;
+	
+	private final Injector injector;
+	
+	@Inject
+	public ChatServlet(Injector injector) {
+		this.injector = injector;
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) {
+		String message = (String) req.getParameter("message");
+		Session session = injector.getInstance(Session.class);
+
+		System.out.println("Testing: " + message + session.getSessionKey());
+	}
+}

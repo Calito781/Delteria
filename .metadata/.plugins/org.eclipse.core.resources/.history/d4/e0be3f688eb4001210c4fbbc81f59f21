@@ -1,0 +1,42 @@
+package delteria.card;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.awt.image.RenderedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+
+public class CardRenderer {
+
+	private static final int WIDTH = 450;
+	private static final int HEIGHT = 80;
+
+	private final DurationFormatter duration_formatter;
+	public CardRenderer() {
+		duration_formatter = new DurationFormatter();
+	}
+
+	public RenderedImage render(Card card) throws IOException {
+		BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_3BYTE_BGR);
+
+		Graphics graphics = image.getGraphics();
+
+		// draw background
+		Image background = ImageIO.read(getClass().getResourceAsStream("card_background.png"));
+		graphics.drawImage(background, 0, 0, null);
+		
+		// draw sprite
+		graphics.drawImage(card.sprite, 10, 0, null);
+		
+		// draw name
+		graphics.drawString(card.isOnline ? "+" : "-", 70, 30);
+		graphics.drawString(card.nickname, 80, 30);
+
+		// draw online time
+		graphics.drawString(duration_formatter.format(card.onlineDuration), 70, 60);
+
+		return image;
+	}
+}

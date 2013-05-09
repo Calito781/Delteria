@@ -1,0 +1,27 @@
+package delteria.gserver;
+
+import java.net.Socket;
+
+import javax.inject.Inject;
+import javax.net.SocketFactory;
+
+import com.google.inject.Provider;
+
+public class GSocketProvider implements Provider<Socket> {
+
+	private final SocketFactory socketFactory;
+
+	@Inject GSocketProvider(SocketFactory socketFactory) {
+		this.socketFactory = socketFactory;
+	}
+
+	@Override
+	public Socket get() {
+		try {
+			return socketFactory.createSocket("67.208.113.139", 2000);
+		} catch (Exception e) {
+			throw new RuntimeException("Could not create socket.", e);
+		}
+	}
+
+}

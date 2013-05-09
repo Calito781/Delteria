@@ -1,0 +1,7 @@
+package delteria.card;
+
+import java.awt.image.ImageFilter;
+
+public class BodyImageFilter extends ImageFilter {
+
+}

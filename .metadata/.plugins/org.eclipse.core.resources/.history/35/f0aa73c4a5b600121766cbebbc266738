@@ -1,0 +1,10 @@
+package delteria.appconfig;
+
+import com.google.inject.persist.PersistService;
+
+public class JPAInitializer {
+	JPAInitializer(PersistService service) {
+		service.start();
+	}
+}
+

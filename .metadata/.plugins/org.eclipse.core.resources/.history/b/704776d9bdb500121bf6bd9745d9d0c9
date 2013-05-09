@@ -1,0 +1,60 @@
+package delteria.repo.items;
+
+import java.awt.image.RenderedImage;
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import javax.imageio.ImageIO;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.inject.Injector;
+
+import delteria.gserver.GServerConnection;
+import delteria.gserver.socket.CommunicationException;
+
+@Singleton
+public class ItemServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 8060795477260698416L;
+
+	private final Injector injector;
+	private final CardRenderer card_renderer = new CardRenderer();
+	
+	@Inject
+	public ItemServlet(Injector injector) {
+		this.injector = injector;
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException
+	{
+		GServerConnection connection = injector.getInstance(GServerConnection.class);
+		String account = (String) request.getParameter("account");
+		try {
+			Future<Card> futureCard = connection.requestCard(account);
+			try {
+				Card card = futureCard.get(10, TimeUnit.SECONDS);
+
+				response.addHeader("Content-Type", "image/png");
+				response.addDateHeader("Expires", System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES));
+				RenderedImage image = card_renderer.render(card);
+				ImageIO.write(image, "png", response.getOutputStream());
+			} catch (TimeoutException e) {
+				futureCard.cancel(true);
+				response.addHeader("Status-Code", "503");
+			}
+		} catch (CommunicationException e) {
+		} catch (InterruptedException e) {
+		} catch (ExecutionException e) {
+		}
+	}
+}

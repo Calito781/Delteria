@@ -1,0 +1,8 @@
+package delteria.gserver;
+
+public class CommunicationException extends Exception {
+
+	public CommunicationException(Exception e) {
+		super("Could not communicate successfully.", e);
+	}
+}

@@ -1,0 +1,33 @@
+package delteria.appconfig;
+
+import javax.servlet.annotation.WebListener;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.servlet.GuiceServletContextListener;
+import com.google.inject.servlet.ServletModule;
+
+import delteria.appconfig.jpa.PersistenceModule;
+import delteria.gserver.GServerModule;
+import delteria.web.file.FileServlet;
+import delteria.web.items.ItemServlet;
+import delteria.web.items.ItemsServlet;
+
+/**
+ * Application Lifecycle Listener implementation class GuiceServletConfig
+ */
+@WebListener
+public class GuiceServletConfig extends GuiceServletContextListener {
+
+	@Override
+	protected Injector getInjector() {
+		return Guice.createInjector(new PersistenceModule(), new GServerModule(), new ServletModule() {
+		     @Override
+		     protected void configureServlets() {
+		    	 serve("/item.jsp").with(ItemServlet.class);
+		    	 serve("/items.jsp").with(ItemsServlet.class);
+		    	 serve("/game/image.png").with(FileServlet.class);
+		     }
+		});
+	}
+}

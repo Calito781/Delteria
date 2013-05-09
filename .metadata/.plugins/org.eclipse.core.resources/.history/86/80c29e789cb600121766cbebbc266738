@@ -1,0 +1,55 @@
+package delteria.repo.items;
+
+import java.util.Map;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import org.eclipse.persistence.annotations.PrimaryKey;
+
+@Entity
+public class Item {
+
+	@Column
+	public final String name;
+
+	@Column
+	public final String icon;
+
+	@Column
+	public final String description;
+	
+	@Column
+	public final Map<String, String> properties;
+	
+	@Column
+	public final boolean quest_item;
+
+	public Item(String name, String icon, String description, boolean quest_item, Map<String, String> properties) {
+		this.name = name;
+		this.icon = icon;
+		this.description = description;
+		this.quest_item = quest_item;
+		this.properties = properties;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getIcon() {
+		return icon;
+	}
+	
+	public String getDescription() {
+		return description;
+	}
+	
+	public boolean isQuestItem() {
+		return quest_item;
+	}
+	
+	public Map<String, String> getProperties() {
+		return properties;
+	}
+}

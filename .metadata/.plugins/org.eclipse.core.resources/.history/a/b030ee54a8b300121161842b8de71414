@@ -1,0 +1,10 @@
+package delteria.gserver;
+
+public class Translator {
+
+	public String toServer() {
+	}
+	
+	public String fromServer() {
+	}
+}

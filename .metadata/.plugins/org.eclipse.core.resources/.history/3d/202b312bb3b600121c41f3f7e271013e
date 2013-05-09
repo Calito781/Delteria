@@ -1,0 +1,38 @@
+package delteria.web.file;
+
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import javax.imageio.ImageIO;
+import javax.inject.Inject;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import delteria.repo.file.File;
+import delteria.repo.file.FileRepository;
+
+public class FileServlet extends HttpServlet {
+
+	@Inject FileRepository files;
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException
+	{
+		String filename = (String) request.getParameter("filename");
+		File file = files.get(filename);
+
+		if (file != null) {
+			response.addHeader("Content-Type", "image/png");
+			response.addDateHeader("Expires", System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES));
+			BufferedImage image = ImageIO.read(new ByteArrayInputStream(file.content));
+			ImageIO.write(image, "png", response.getOutputStream());
+		} else {
+			response.addHeader("Status-Code", "503");
+		}
+	}
+}

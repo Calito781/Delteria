@@ -1,0 +1,65 @@
+package delteria.gserver;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.concurrent.Future;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+import com.google.gson.JsonElement;
+
+import delteria.card.Card;
+import delteria.gserver.commands.CommandChat;
+import delteria.gserver.commands.CommandRequestCard;
+import delteria.gserver.socket.AlwaysAliveSocket;
+
+@Singleton
+public class GServerConnection {
+
+	private final AlwaysAliveSocket connection;
+	private final GServerAdapter adapter;
+	private final List<CommunicationListener> listeners = new ArrayList<CommunicationListener>();
+
+	@Inject GServerConnection(AlwaysAliveSocket connection, GServerAdapter adapter) {
+		this.connection = connection;
+		this.adapter = adapter;
+
+		addListener(new IncomingLogger());
+	}
+	
+	public void processMessage() throws CommunicationException {
+		JsonElement message;
+
+		String encoded_incoming = connection.read();
+		message = adapter.convertFromServer(encoded_incoming);
+
+		Iterator<CommunicationListener> iterator = listeners.iterator();
+		while (iterator.hasNext()) {
+			CommunicationListener listener = iterator.next();
+			if (listener.isExpired()) {
+				iterator.remove();
+			} else {
+				listener.onReceivedMessage(message);
+			}
+		}
+	}
+	
+	public void sendChat(String message) throws CommunicationException {
+		new CommandChat(message).sendCommand(this);
+	}
+
+	public Future<Card> requestCard(final String account) throws CommunicationException {
+		return new CommandRequestCard(account).sendCommand(this);
+	}
+	
+	public void sendCommand(JsonElement command) throws CommunicationException {
+		System.out.println("Outgoing: "+ command.toString());
+		connection.write(adapter.convertToServer(command));
+	}
+
+	public void addListener(CommunicationListener listener) {
+		listeners.add(listener);
+	}
+}

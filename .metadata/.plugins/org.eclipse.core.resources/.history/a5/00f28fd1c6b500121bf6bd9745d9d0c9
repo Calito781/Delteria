@@ -1,0 +1,5 @@
+package delteria.gserver.commands;
+
+public class CommandRequestItems {
+
+}

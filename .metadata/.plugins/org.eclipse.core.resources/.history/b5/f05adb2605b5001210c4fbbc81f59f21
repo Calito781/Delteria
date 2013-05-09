@@ -1,0 +1,20 @@
+package delteria.card;
+
+import java.awt.image.RGBImageFilter;
+
+import com.google.gson.JsonArray;
+
+public class BodyImageFilter extends RGBImageFilter {
+
+	private final JsonArray colors;
+
+	public BodyImageFilter(JsonArray colors) {
+		this.colors = colors;
+	}
+
+	@Override
+	public int filterRGB(int x, int y, int rgb) {
+		return rgb;
+	}
+
+}

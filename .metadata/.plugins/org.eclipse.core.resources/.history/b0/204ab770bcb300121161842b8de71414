@@ -1,0 +1,38 @@
+package delteria.gserver;
+
+import javax.inject.Inject;
+
+import com.google.gson.JsonElement;
+
+public class GServerHandler implements Runnable {
+
+	private final GServerConnection connection;
+
+	@Inject GServerHandler(GServerConnection connection) {
+		this.connection = connection;
+	}
+	
+	@Override
+	public void run() {
+		while (! Thread.interrupted()) {
+			JsonElement message;
+			try {
+				message = connection.getMessage();
+			} catch (CommunicationException e) {
+				throw new RuntimeException(e);
+			}
+
+			if (message == null) {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					Thread.currentThread().interrupt();
+				}
+			}
+			
+			System.out.println("Received Message: " + message.toString());
+		}
+		Thread.currentThread().interrupt();
+	}
+
+}

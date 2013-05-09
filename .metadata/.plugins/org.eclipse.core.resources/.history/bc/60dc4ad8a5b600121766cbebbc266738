@@ -1,0 +1,16 @@
+package delteria.appconfig;
+
+import javax.swing.JApplet;
+
+import com.google.inject.AbstractModule;
+import com.google.inject.persist.jpa.JpaPersistModule;
+
+public class PersistenceModule extends AbstractModule {
+
+	@Override
+	protected void configure() {
+		install(new JpaPersistModule("myPU"));
+		bind(JPAInitializer.class).asEagerSingleton();
+	}
+
+}

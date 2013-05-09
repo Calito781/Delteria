@@ -1,0 +1,28 @@
+package delteria.guice;
+
+import javax.servlet.annotation.WebListener;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.servlet.GuiceServletContextListener;
+import com.google.inject.servlet.ServletModule;
+
+import delteria.communication.ChatServlet;
+
+/**
+ * Application Lifecycle Listener implementation class GuiceServletConfig
+ *
+ */
+@WebListener
+public class GuiceServletConfig extends GuiceServletContextListener {
+
+	@Override
+	protected Injector getInjector() {
+		return Guice.createInjector(new ServletModule() {
+		     @Override
+		     protected void configureServlets() {
+		    	 serve("/sendChat").with(ChatServlet.class);
+		     }
+		});
+	}
+}

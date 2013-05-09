@@ -1,0 +1,44 @@
+package delteria.card;
+
+import java.io.IOException;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.inject.Injector;
+
+import delteria.gserver.CommunicationException;
+import delteria.gserver.GServerConnection;
+
+@Singleton
+public class CardServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 8060795477260698416L;
+
+	private final Injector injector;
+	
+	@Inject
+	public CardServlet(Injector injector) {
+		this.injector = injector;
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException
+	{
+		GServerConnection connection = injector.getInstance(GServerConnection.class);
+		String account = (String) request.getParameter("account");
+		try {
+			connection.requestCard(account);
+		} catch (CommunicationException e) {
+			; // Print error message.
+		}
+		
+		request.getRequestDispatcher("card.jsp").forward(request, response);
+
+	}
+}

@@ -1,0 +1,30 @@
+package delteria.web.file;
+
+import java.io.IOException;
+
+import javax.inject.Inject;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import delteria.repo.file.File;
+import delteria.repo.file.FileRepository;
+import delteria.repo.items.Item;
+import delteria.web.items.PropertyFormatter;
+
+public class FileServlet extends HttpServlet {
+
+	@Inject FileRepository files;
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException
+	{
+		String filename = (String) request.getParameter("filename");
+		File file = files.get(filename);
+
+		request.set
+		request.getRequestDispatcher("item/viewItem.jsp").forward(request, response);
+	}
+}

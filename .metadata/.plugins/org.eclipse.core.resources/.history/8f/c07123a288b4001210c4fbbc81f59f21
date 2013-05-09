@@ -1,0 +1,62 @@
+package delteria.card;
+
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import javax.imageio.ImageIO;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.google.inject.Injector;
+
+import delteria.gserver.CommunicationException;
+import delteria.gserver.GServerConnection;
+
+@Singleton
+public class CardServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 8060795477260698416L;
+
+	private final Injector injector;
+	
+	@Inject
+	public CardServlet(Injector injector) {
+		this.injector = injector;
+	}
+	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException
+	{
+		GServerConnection connection = injector.getInstance(GServerConnection.class);
+		String account = (String) request.getParameter("account");
+		Future<Card> futureCard = null;
+		try {
+			futureCard = connection.requestCard(account);
+			try {
+				Card card = futureCard.get(10, TimeUnit.SECONDS);
+				request.setAttribute("nickname", card.nickname);
+				request.setAttribute("is_online", card.isOnline);
+				request.setAttribute("online_time", card.onlineDuration);
+			} catch (TimeoutException e) {
+				futureCard.cancel(true);
+			}
+		} catch (CommunicationException e) {
+		} catch (InterruptedException e) {
+		} catch (ExecutionException e) {
+		}
+		
+		BufferedImage image = new BufferedImage(400, 60, BufferedImage.TYPE_3BYTE_BGR);
+
+		response.addHeader("Content-Type", "image/png");
+		ImageIO.write(image, "png", response.getOutputStream());
+	}
+}

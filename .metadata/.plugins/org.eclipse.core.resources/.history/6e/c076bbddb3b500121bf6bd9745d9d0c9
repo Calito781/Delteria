@@ -1,0 +1,8 @@
+package delteria.gserver.commands;
+
+import delteria.gserver.CommunicationException;
+import delteria.gserver.GServerConnection;
+
+public interface Command<Response> {
+	public void sendCommand(GServerConnection connection) throws CommunicationException;
+}

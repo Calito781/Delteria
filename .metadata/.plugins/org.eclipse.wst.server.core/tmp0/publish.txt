@@ -1,0 +1,3 @@
+#GlassFish 3
+#Wed May 08 22:13:05 EDT 2013
+org.eclipse.jst.jee.server\:Web=/Applications/eclipse/plugins/oracle.eclipse.runtime.glassfish_3.1.0.0/glassfish3/glassfish/domains/domain1/eclipseApps/Web

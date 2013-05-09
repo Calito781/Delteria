@@ -1,0 +1,30 @@
+package delteria.gserver;
+
+import java.io.IOException;
+
+import javax.inject.Inject;
+
+public class GServerHandler implements Runnable {
+
+	private final GServerConnection connection;
+
+	@Inject GServerHandler(GServerConnection connection) {
+		this.connection = connection;
+	}
+	
+	@Override
+	public void run() {
+		while ( ! Thread.interrupted()) {
+			try {
+				connection.processMessage();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+			
+			Thread.yield();
+		}
+
+		Thread.currentThread().interrupt();
+	}
+
+}

@@ -1,0 +1,18 @@
+package delteria.card;
+
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+
+public class CharacterRenderer {
+	private static final int WIDTH = 46;
+	private static final int HEIGHT = 64;
+
+	public Image render(Card card) {
+		BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_3BYTE_BGR);
+		Graphics graphics = image.getGraphics();
+		graphics.drawImage(image, 0, 0, 32, 32, 0, 32 * 2, 32, 32, null);
+
+		return image;
+	}
+}

@@ -1,0 +1,16 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="delt" tagdir="/WEB-INF/tags" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<delt:page>
+
+<div class="box">
+<ul>
+<c:forEach items="${items}" var="item">
+	<li><a href="item.jsp?item_id=${item.itemId}">
+	<c:if test="${item.icon_file.length() > 0}"><img alt="${item.name}" src="game/image.png?filename=${item.icon_file}" /></c:if> ${item.name}</a></li>
+</c:forEach>
+</ul>
+</div>
+
+</delt:page>

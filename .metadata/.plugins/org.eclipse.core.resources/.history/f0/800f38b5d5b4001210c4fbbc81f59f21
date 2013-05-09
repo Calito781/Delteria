@@ -1,0 +1,20 @@
+package delteria.gserver;
+
+import java.net.Socket;
+
+import javax.net.SocketFactory;
+
+import com.google.inject.AbstractModule;
+
+public class GServerModule extends AbstractModule {
+
+	@Override
+	protected void configure() {
+		bind(SocketFactory.class).toInstance(SocketFactory.getDefault());
+		bind(Socket.class).toProvider(GSocketProvider.class);
+		bind(GServerAdapter.class);
+		bind(GServerConnection.class).asEagerSingleton();
+		bind(GServerHandler.class);
+		
+	}
+}

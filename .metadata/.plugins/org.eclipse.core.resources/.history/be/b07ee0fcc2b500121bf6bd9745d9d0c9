@@ -1,0 +1,20 @@
+package delteria.repo.items;
+
+public class Item {
+
+	public final String name;
+	public final String icon;
+
+	public Item(String name, String icon) {
+		this.name = name;
+		this.icon = icon;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	
+	public String getIcon() {
+		return icon;
+	}
+}

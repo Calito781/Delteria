@@ -1,0 +1,33 @@
+package delteria.gserver;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.Socket;
+
+import javax.inject.Provider;
+
+public class AlwaysAliveSocket {
+
+	private final Provider<Socket> socket_provider;
+
+	public AlwaysAliveSocket(Provider<Socket> socketProvider) {
+		this.socket_provider = socketProvider;
+	}
+	
+	public String read() throws CommunicationException {
+		int retry_count = 0;
+		do {
+			Socket socket = socket_provider.get();
+			try {
+				BufferedReader reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			} catch (IOException e) {
+				try {
+					socket.close();
+				} catch (IOException eClose) {
+					throw new CommunicationException(eClose);
+				}
+			}
+		} while (retry_count < 5);
+	}
+}

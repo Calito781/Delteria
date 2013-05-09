@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
+		<item value="500" key="SashWeightDetails"/>
+		<item value="500" key="SashWeightTree"/>
+		<item value="156" key="HEIGHT"/>
+		<item value="600" key="WIDTH"/>
+	</section>
+	<section name="conditionHistory">
+		<item value="3" key="conditionHistoryEntryCount"/>
+		<item value="return (rgba != 33792) &amp;&amp; (rgba != -16777216) &amp;&amp; (rgba &gt;= 0);" key="conditionHistoryEntry_0"/>
+		<item value="return (rgba != 33792) &amp;&amp; (rgba != -16777216);" key="conditionHistoryEntry_1"/>
+		<item value="return (rgba != 33792);" key="conditionHistoryEntry_2"/>
+	</section>
+</section>

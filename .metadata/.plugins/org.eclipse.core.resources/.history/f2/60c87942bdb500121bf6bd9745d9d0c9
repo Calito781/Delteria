@@ -1,0 +1,29 @@
+package delteria.appconfig;
+
+import javax.servlet.annotation.WebListener;
+
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.servlet.GuiceServletContextListener;
+import com.google.inject.servlet.ServletModule;
+
+import delteria.card.CardServlet;
+import delteria.gserver.GServerModule;
+
+/**
+ * Application Lifecycle Listener implementation class GuiceServletConfig
+ *
+ */
+@WebListener
+public class GuiceServletConfig extends GuiceServletContextListener {
+
+	@Override
+	protected Injector getInjector() {
+		return Guice.createInjector(new GServerModule(), new ServletModule() {
+		     @Override
+		     protected void configureServlets() {
+		    	 serve("/card.png").with(CardServlet.class);
+		     }
+		});
+	}
+}

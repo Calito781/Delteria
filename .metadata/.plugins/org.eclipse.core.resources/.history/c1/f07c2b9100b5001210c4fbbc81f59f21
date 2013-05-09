@@ -1,0 +1,9 @@
+package delteria.card;
+
+import java.awt.image.RenderedImage;
+
+public class CharacterRenderer {
+	public Image render(Card card) {
+		return null;
+	}
+}

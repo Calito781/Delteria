@@ -1,0 +1,12 @@
+package delteria.gserver;
+
+import com.google.inject.AbstractModule;
+
+public class GServerModule extends AbstractModule {
+
+	@Override
+	protected void configure() {
+		bind(GServerConnection.class);
+	}
+
+}

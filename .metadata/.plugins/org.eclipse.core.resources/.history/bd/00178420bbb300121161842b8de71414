@@ -1,0 +1,48 @@
+package delteria.gserver;
+
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+import javax.inject.Inject;
+import javax.inject.Provider;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+
+/**
+ * Application Lifecycle Listener implementation class GServerListener
+ *
+ */
+public class GServerListener implements ServletContextListener {
+
+	
+    private ExecutorService executor_service;
+	private final GServerHandler handler;
+
+	/**
+     * Default constructor. 
+     */
+    @Inject GServerListener(GServerHandler handler) {
+    	this.handler = handler;
+    }
+
+	/**
+     * @see ServletContextListener#contextInitialized(ServletContextEvent)
+     */
+    public void contextInitialized(ServletContextEvent sce) {
+    	System.out.println("Initialized");
+    	
+    	executor_service = Executors.newSingleThreadExecutor();
+    	executor_service.submit(handler);
+    }
+
+	/**
+     * @see ServletContextListener#contextDestroyed(ServletContextEvent)
+     */
+    public void contextDestroyed(ServletContextEvent sce) {
+
+    	executor_service.shutdownNow();
+    	
+    	System.out.println("Destroyed");
+    }
+	
+}

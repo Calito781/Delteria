@@ -1,0 +1,14 @@
+package delteria.gserver;
+
+import java.net.Socket;
+
+import com.google.inject.Provider;
+
+public class GSocketProvider implements Provider<Socket> {
+
+	@Override
+	public Socket get() {
+		return null;
+	}
+
+}

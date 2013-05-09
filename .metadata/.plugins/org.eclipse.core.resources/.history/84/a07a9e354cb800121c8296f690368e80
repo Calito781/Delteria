@@ -1,0 +1,5 @@
+package delteria.gserver.util;
+
+public class SocketFactoryProvider {
+
+}

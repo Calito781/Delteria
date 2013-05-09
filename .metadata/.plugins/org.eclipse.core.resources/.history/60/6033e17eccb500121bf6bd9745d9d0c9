@@ -1,0 +1,29 @@
+package delteria.repo.items;
+
+import java.util.Map.Entry;
+
+public class PropertyFormatter {
+	enum PROPERTY {
+		meleeDamage("Damage: <b>%s</b>")
+		;
+
+		private final String property_format;
+
+		private PROPERTY(String format) {
+			this.property_format = format;
+		}
+		
+		public String format(String value) {
+			return String.format(property_format, value);
+		}
+	}
+	
+	public boolean shouldDisplayProperty(String property_name) {
+		PROPERTY.valueOf(property_name);
+		return property_name.equals("meleeDamage");
+	}
+
+	public String format(Entry<String, String> property) {
+		return PROPERTY.valueOf(property.getKey()).format(property.getValue());
+	}
+}

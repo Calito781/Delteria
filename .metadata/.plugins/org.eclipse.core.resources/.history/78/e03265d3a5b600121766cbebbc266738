@@ -1,0 +1,13 @@
+package delteria.appconfig;
+
+import javax.inject.Singleton;
+
+import com.google.inject.persist.PersistService;
+
+@Singleton
+class JPAInitializer {
+	JPAInitializer(PersistService service) {
+		service.start();
+	}
+}
+

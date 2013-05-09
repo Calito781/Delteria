@@ -1,0 +1,26 @@
+package delteria.repo.card;
+
+import java.awt.Image;
+
+import com.google.gson.JsonArray;
+
+public class Card {
+
+	public final String nickname;
+	public final boolean isOnline;
+	public final long onlineDuration;
+	public final String hat;
+	public final String head;
+	public final String body;
+	public final JsonArray colors;
+
+	public Card(String nickname, boolean isOnline, long onlineDuration, String hat, String head, String body, JsonArray colors) {
+		this.nickname = nickname;
+		this.isOnline = isOnline;
+		this.onlineDuration = onlineDuration;
+		this.hat = hat;
+		this.head = head;
+		this.body = body;
+		this.colors = colors;
+	}
+}

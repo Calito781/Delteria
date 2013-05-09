@@ -1,0 +1,9 @@
+package delteria.servlet;
+
+import javax.servlet.http.HttpServlet;
+
+public class ResourceServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 7009990912381133897L;
+
+}

@@ -1,0 +1,79 @@
+package delteria.repo.items;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import javax.ejb.Stateless;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
+import com.google.inject.persist.UnitOfWork;
+
+import delteria.gserver.GServerConnection;
+import delteria.gserver.socket.CommunicationException;
+
+@Stateless
+public class ItemRepository {
+
+	@PersistenceContext(unitName="myPU")
+	private EntityManager em;
+	
+	private GServerConnection server;
+	
+	@Inject ItemRepository(GServerConnection server, EntityManager em) {
+		this.em = em;
+		this.server = server;
+	}
+	
+	public Item get(String item_id) {
+		Item item = em.find(Item.class, item_id);
+		
+		// If we don't have the item cached, load it from the server
+		if (item == null) {
+			item = loadFromGame(item_id);
+			if (item != null) {
+				item = em.merge(item);
+			}
+		}
+		
+		return item;
+	}
+	
+	public List<String> getAll() {
+		List<String> items = new ArrayList<String>();
+		try {
+			Future<List<String>> future_item_list = server.requestItems();
+			return future_item_list.get(10, TimeUnit.SECONDS);
+		} catch (CommunicationException e) {
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		} catch (ExecutionException e) {
+		} catch (TimeoutException e) {
+		}
+		return items;
+	}
+
+	private Item loadFromGame(String item_id) {
+		Item item = null;
+		Future<Item> future_item = null;
+		try {
+			future_item = server.requestItem(item_id);
+			item = future_item.get(10, TimeUnit.SECONDS);
+		} catch (TimeoutException e) {
+			future_item.cancel(true);
+		} catch (InterruptedException e) {
+			Thread.currentThread().interrupt();
+		} catch (CommunicationException e) {
+			e.printStackTrace();
+		} catch (ExecutionException e) {
+			e.printStackTrace();
+		}
+
+		return item;
+	}
+}

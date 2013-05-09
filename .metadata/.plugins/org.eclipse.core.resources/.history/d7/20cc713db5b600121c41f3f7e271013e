@@ -1,0 +1,39 @@
+package delteria.web.items;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeoutException;
+
+import javax.inject.Inject;
+import javax.inject.Provider;
+import javax.inject.Singleton;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import delteria.gserver.GServerConnection;
+import delteria.gserver.socket.CommunicationException;
+import delteria.repo.items.ItemReference;
+import delteria.repo.items.ItemRepository;
+
+@Singleton
+public class ItemsServlet extends HttpServlet {
+
+	private static final long serialVersionUID = -7229176987914516554L;
+
+	@Inject ItemRepository items;
+	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException
+	{
+		List<String> items = items.getAll();
+
+		request.setAttribute("items", items);
+		request.getRequestDispatcher("item/viewItemList.jsp").forward(request, response);
+	}
+}

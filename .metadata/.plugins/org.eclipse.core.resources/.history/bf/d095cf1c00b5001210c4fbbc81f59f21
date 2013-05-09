@@ -1,0 +1,18 @@
+package delteria.card;
+
+import java.awt.Image;
+
+public class Card {
+
+	public final String nickname;
+	public final boolean isOnline;
+	public final long onlineDuration;
+	public final Image sprite;
+
+	public Card(String nickname, boolean isOnline, long onlineDuration, Image sprite) {
+		this.nickname = nickname;
+		this.isOnline = isOnline;
+		this.onlineDuration = onlineDuration;
+		this.sprite = sprite;
+	}
+}

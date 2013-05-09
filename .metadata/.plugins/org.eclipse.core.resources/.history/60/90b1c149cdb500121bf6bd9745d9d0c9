@@ -1,0 +1,44 @@
+package delteria.repo.items;
+
+import java.util.Map.Entry;
+
+public class PropertyFormatter {
+	enum PROPERTY {
+		meleeDamage("Damage: <b>%s</b>"),
+		Damage("Damage: <b>%s</b>"),
+		hp_heal("Heals: <b>%s</b>")
+		;
+
+		private final String property_format;
+
+		private PROPERTY(String format) {
+			this.property_format = format;
+		}
+		
+		public String format(String value) {
+			return String.format(property_format, value);
+		}
+		
+		public static boolean hasValue(String type) {
+			for (PROPERTY value: PROPERTY.values()) {
+				if (type.equals(value.name())) {
+					return true;
+				}
+			}
+			return false;
+		}
+	}
+	
+	public boolean shouldDisplayProperty(String property_name) {
+		return true;
+//		return PROPERTY.hasValue(property_name);
+	}
+
+	public String format(Entry<String, String> property) {
+		if (PROPERTY.hasValue(property.getKey())) {
+			return PROPERTY.valueOf(property.getKey()).format(property.getValue());
+		} else {
+			return String.format("Unknonw[%s]: %s", property.getKey(), property.getValue());
+		}
+	}
+}

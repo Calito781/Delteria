@@ -1,0 +1,5 @@
+package delteria.guice;
+
+public class ServletModule {
+
+}

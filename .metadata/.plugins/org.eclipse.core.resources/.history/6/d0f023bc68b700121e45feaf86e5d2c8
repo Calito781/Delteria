@@ -1,0 +1,56 @@
+package delteria.web.card;
+
+import java.awt.image.RenderedImage;
+import java.io.IOException;
+import java.util.concurrent.TimeUnit;
+
+import javax.ejb.EJB;
+import javax.imageio.ImageIO;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import delteria.repo.card.Card;
+import delteria.repo.card.CardRepository;
+
+@Singleton
+public class CardServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 8060795477260698416L;
+
+	@EJB CardRenderer card_renderer;
+
+	@Inject CardRepository cards;
+	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String account = request.getParameter("account");
+		if (account == null) return;
+		
+		Card card = cards.get(account);
+
+		if (card != null) {
+			int background_id = getBackgroundId(request.getParameter("background"));
+
+			response.addHeader("Content-Type", "image/png");
+			response.addDateHeader("Expires", System.currentTimeMillis() + TimeUnit.MILLISECONDS.convert(5, TimeUnit.MINUTES));
+			RenderedImage image = card_renderer.render(card, background_id);
+			ImageIO.write(image, "png", response.getOutputStream());
+		} else {
+			response.addHeader("Status-Code", "503");
+		}
+	}
+
+	private int getBackgroundId(String background) {
+		if (background == null) return 1;
+		try {
+			return Integer.valueOf(background);
+		} catch (NumberFormatException e) {
+			return 1;
+		}
+	}
+}

@@ -1,0 +1,59 @@
+package delteria.gserver;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonParser;
+
+public class GServerAdapter {
+	private final JsonParser parser = new JsonParser();
+	
+	public String convertToServer(JsonElement json) {
+		String outgoing = json.toString();
+		return encode(outgoing);
+	}
+	
+	private String encode(String outgoing) {
+		StringBuilder encoded_outgoing = new StringBuilder();
+		for (int i = 0; i < outgoing.length(); i ++) {
+			if (outgoing.startsWith("\\\\", i)) {
+				encoded_outgoing.append("\\");
+				i ++;
+			} else if (outgoing.startsWith("\\n", i)) {
+				encoded_outgoing.append("\n");
+				i ++;
+			} else if (outgoing.startsWith("\\r", i)) {
+				encoded_outgoing.append("\r");
+				i ++;
+			} else {
+				encoded_outgoing.append(outgoing.charAt(i));
+			}
+		}
+
+		return encoded_outgoing.toString();
+	}
+
+	public JsonElement convertFromServer(String incoming) {
+		String original = decode(incoming);
+
+		return parser.parse(original);
+	}
+
+	private String decode(String encoded_incoming) {
+		StringBuilder incoming = new StringBuilder();
+		for (int i = 0; i < encoded_incoming.length(); i ++) {
+			if (encoded_incoming.startsWith("\\\\", i)) {
+				incoming.append("\\");
+				i ++;
+			} else if (encoded_incoming.startsWith("\\n", i)) {
+				incoming.append("\n");
+				i ++;
+			} else if (encoded_incoming.startsWith("\\r", i)) {
+				incoming.append("\r");
+				i ++;
+			} else {
+				incoming.append(encoded_incoming.charAt(i));
+			}
+		}
+
+		return incoming.toString();
+	}
+}

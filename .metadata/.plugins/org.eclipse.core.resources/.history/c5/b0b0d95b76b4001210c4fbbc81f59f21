@@ -1,0 +1,17 @@
+package delteria.card;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class CardServlet extends HttpServlet {
+
+	private static final long serialVersionUID = 8060795477260698416L;
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) {
+		String account = (String) req.getParameter("account");
+		
+		System.out.println("Account: "+ account);
+	}
+}

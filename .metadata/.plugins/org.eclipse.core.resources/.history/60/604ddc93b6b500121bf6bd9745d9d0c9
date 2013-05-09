@@ -1,0 +1,10 @@
+package delteria.gserver.commands;
+
+import java.util.concurrent.Future;
+
+import delteria.gserver.CommunicationException;
+import delteria.gserver.GServerConnection;
+
+public interface Command<Response> {
+	public Future<Response> sendCommand(GServerConnection connection) throws CommunicationException;
+}

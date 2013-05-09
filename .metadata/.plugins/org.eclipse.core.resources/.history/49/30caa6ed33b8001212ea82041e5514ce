@@ -1,0 +1,31 @@
+package delteria.appconfig.jpa;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
+
+import com.google.inject.Injector;
+import com.google.inject.persist.PersistService;
+
+@WebListener
+public class JPAInitializer implements ServletContextListener {
+
+	@Override
+	public void contextInitialized(ServletContextEvent sce) {
+        Injector injector = (Injector) sce.getServletContext()
+                .getAttribute(Injector.class.getName());      
+
+        PersistService service = injector.getInstance(PersistService.class);
+        service.start();
+	}
+
+	@Override
+	public void contextDestroyed(ServletContextEvent sce) {
+        Injector injector = (Injector) sce.getServletContext()
+                .getAttribute(Injector.class.getName());      
+
+        PersistService service = injector.getInstance(PersistService.class);
+        service.stop();
+	}
+}
+

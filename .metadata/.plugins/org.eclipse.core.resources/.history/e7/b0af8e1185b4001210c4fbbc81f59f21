@@ -1,0 +1,125 @@
+package delteria.gserver;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Future;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonPrimitive;
+
+import delteria.card.Card;
+import delteria.concurrent.FutureValue;
+
+@Singleton
+public class GServerConnection {
+
+	private final Socket connection;
+	private final GServerAdapter adapter;
+	private final List<CommunicationListener> listeners = new ArrayList<CommunicationListener>();
+	private final BufferedReader reader;
+
+	@Inject GServerConnection(Socket connection, GServerAdapter adapter) {
+		this.connection = connection;
+		this.adapter = adapter;
+		try {
+			this.reader = new BufferedReader(new InputStreamReader(
+					connection.getInputStream()));
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+
+		listeners.add(new CommunicationListener() {		
+			@Override
+			public void onReceivedMessage(JsonElement message) {
+				System.out.println("Incoming: " + message.toString());
+			}
+		});
+	}
+	
+	public void processMessage() throws CommunicationException {
+		String encoded_incoming;
+		try {
+			if ( ! reader.ready()) return;
+			
+			encoded_incoming = reader.readLine();
+		} catch (IOException e) {
+			throw new CommunicationException(e);
+		}
+		
+		JsonElement message = adapter.convertFromServer(encoded_incoming);
+		for (CommunicationListener listener: listeners) {
+			listener.onReceivedMessage(message);
+		}
+	}
+	
+	public void sendChat(String message) throws CommunicationException {
+		JsonArray command = new JsonArray();
+		command.add(new JsonPrimitive("chat"));
+		command.add(new JsonPrimitive(message));
+		
+		sendCommand(command);
+	}
+
+	public Future<Card> requestCard(final String account) throws CommunicationException {
+		// Listen for Response
+		final FutureValue<Card> futureValue = new FutureValue<Card>();
+		listeners.add(new CommunicationListener() {	
+			@Override
+			public void onReceivedMessage(JsonElement message) {
+				if (futureValue.isCancelled()) {
+					listeners.remove(this);
+					return;
+				}
+
+				if (!(message instanceof JsonArray))
+					return;
+
+				JsonArray command = (JsonArray) message;
+				if ("card".equals(command.get(0).getAsString()) &&
+						account.equals(command.get(1).getAsString())) {
+					Card card = new Card(
+						command.get(2).getAsString(),
+						command.get(3).getAsBoolean(),
+						command.get(4).getAsLong()
+					);
+					
+					futureValue.set(card);
+					listeners.remove(this);
+				}
+			}
+		});
+		
+		// Send Command
+		JsonArray command = new JsonArray();
+		command.add(new JsonPrimitive("card"));
+		command.add(new JsonPrimitive(account));
+		sendCommand(command);
+
+		// Return value when received
+		return futureValue;
+	}
+	
+	private void sendCommand(JsonElement command) throws CommunicationException {
+		try {
+			System.out.println("Outgoing: "+ command.toString());
+
+			String outputMessage = adapter.convertToServer(command);
+
+			OutputStream output = connection.getOutputStream();
+			output.write(outputMessage.getBytes());
+			output.flush();
+		} catch (IOException e) {
+			throw new CommunicationException(e);
+		}
+	}
+}

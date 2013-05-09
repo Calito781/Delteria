@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+/Users/wleroux/Projects/Delteria/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/4168046373.index
+/Web/src
+/Users/wleroux/Projects/Delteria/.metadata/.plugins/org.eclipse.jst.jsp.core/jspsearch/2079966477.index
+/Web/src
